@@ -10,6 +10,9 @@
     <option name="selectedJavaProfile" value="wxl" />
     <option name="selectedJavaScriptProfile" value="wxl" />
   </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="JSX" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
