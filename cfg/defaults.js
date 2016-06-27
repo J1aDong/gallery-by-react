@@ -2,13 +2,14 @@
 const path = require('path');
 const srcPath = path.join(__dirname, '/../src');
 const dfltPort = 8000;
-function getDefaultModules() {
+function getDefaultModules()
+{
   return {
     preLoaders: [{
-        test: /\.(js|jsx)$/,
-        include: srcPath,
-        loader: 'eslint-loader'
-      }],
+      test: /\.(js|jsx)$/,
+      include: srcPath,
+      loader: 'eslint-loader'
+    }],
     loaders: [
       {
         test: /\.css$/,
@@ -31,7 +32,11 @@ function getDefaultModules() {
         loader: 'style-loader!css-loader!postcss-loader!stylus-loader'
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        test: /\.(png|jpg|gif|woff|woff2|eot|ttf)$/,
         loader: 'url-loader?limit=8192'
       },
       {
@@ -46,7 +51,8 @@ module.exports = {
   publicPath: '/assets/',
   port: dfltPort,
   getDefaultModules: getDefaultModules,
-  postcss: function () {
+  postcss: function ()
+  {
     return [];
   }
 };
